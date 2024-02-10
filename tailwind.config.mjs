@@ -54,7 +54,7 @@ module.exports = {
         },
       },
       fontFamily: {
-        sans: ['Rethink Sans', 'sans-serif'],
+        'sans': ['Rethink Sans', 'sans-serif'],
       },
       borderRadius: {
         lg: 'var(--radius)',
