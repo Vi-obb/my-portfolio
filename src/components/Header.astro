@@ -1,0 +1,76 @@
+---
+import { Separator } from '@/components/ui/separator';
+import { Image } from 'astro:assets';
+import myPhoto from '@/assets/images/myPhoto.jpg';
+import {
+  GitHubLogoIcon,
+  DiscordLogoIcon,
+  TwitterLogoIcon,
+} from '@radix-ui/react-icons';
+---
+
+<header class="py-5">
+      <nav class="flex flex-row items-center gap-3">
+        <div class="flex flex-row gap-3 items-center w-1/2">
+          <ul class="flex flex-row gap-3">
+            <li>
+              <a href="/"
+                ><GitHubLogoIcon
+                  className="text-green hover:text-dark-green"
+                /></a
+              >
+            </li>
+            <li>
+              <a href="/"
+                ><DiscordLogoIcon
+                  className="text-green hover:text-dark-green"
+                /></a
+              >
+            </li>
+            <li>
+              <a href="/"
+                ><TwitterLogoIcon
+                  className="text-green hover:text-dark-green"
+                /></a
+              >
+            </li>
+          </ul>
+          <Separator orientation="vertical" />
+          <ul class="flex flex-row gap-3">
+            <li
+              class="py-1 px-3 bg-off-white rounded text-xs font-semibold hover:bg-green hover:text-white"
+            >
+              <a href="/">Home</a>
+            </li>
+            <li
+              class="py-1 px-3 bg-off-white rounded text-xs font-semibold hover:bg-green hover:text-white"
+            >
+              <a href="/about">About</a>
+            </li>
+            <li
+              class="py-1 px-3 bg-off-white rounded text-xs font-semibold hover:bg-green hover:text-white"
+            >
+              <a href="/blog">Blog</a>
+            </li>
+            <li
+              class="py-1 px-3 bg-off-white rounded text-xs font-semibold hover:bg-green hover:text-white"
+            >
+              <a href="/projects">Projects</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="w-1/2 flex flex-row justify-end items-center gap-3">
+          <a href="/" class="flex flex-row gap-2 items-center"
+            ><Image
+              src={myPhoto}
+              alt="Vincent Obbeng"
+              class="rounded-full w-7 h-7 border-2 border-green"
+            />
+            <h2 class="text-sm font-semibold text-dark-green">
+              Vincent Obbeng
+            </h2>
+          </a>
+        </div>
+      </nav>
+    </header>

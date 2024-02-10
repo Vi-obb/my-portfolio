@@ -13,6 +13,12 @@ module.exports = {
     },
     extend: {
       colors: {
+        'dark-green': '#1d3630',
+        'off-white': '#f7f4ee',
+        'light-green': '#becac4',
+        'black': '#06140e',
+        'tan': '#e1dfda',
+        'green': '#6e807a',
         border: 'hsl(var(--border))',
         input: 'hsl(var(--input))',
         ring: 'hsl(var(--ring))',
@@ -46,6 +52,9 @@ module.exports = {
           DEFAULT: 'hsl(var(--card))',
           foreground: 'hsl(var(--card-foreground))',
         },
+      },
+      fontFamily: {
+        sans: ['Rethink Sans', 'sans-serif'],
       },
       borderRadius: {
         lg: 'var(--radius)',
