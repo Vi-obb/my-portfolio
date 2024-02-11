@@ -1,26 +1,31 @@
 ---
 import BaseLayout from '@/Layouts/BaseLayout.astro';
+import { Button } from '@/components/ui/button';
+import { EnvelopeOpenIcon } from '@radix-ui/react-icons';
 
-const title = 'Vincent Obbeng | Software Engineer';
+const title = 'Vincent Obbeng | Web Developer & Designer';
 ---
 
 <BaseLayout title={title}>
   <main>
-    <section>
-      <div class="w-3/5">
-        <h1 class="text-dark-green text-2xl font-bold">
-          <em>Akwaaba!</em>to my home on the internet
-        </h1>
-        <p>
-          I'm Vincent Obbeng, a software engineer based in Accra, Ghana. I'm
-          passionate about building software that solves real-world problems and
-          helps people. I'm currently working at <a
-            href="https://www.azentio.com"
-            class="text-dark-green font-bold">Azentio Software</a
-          > as a Software Engineer.
+    <section class="pb-10">
+      <div class="w-1/2">
+        <h1 class="mb-3">Welcome to my digital kitchen.</h1>
+        <p class="text-pretty mb-3 leading-relaxed">
+          <span class="font-semibold"
+            >I'm Vincent, a web developer and designer based in Accra, Ghana. I
+            love to make landing pages, marketing sites and application
+            interfaces.</span
+          > Still finding more stuff to be good at but if you need help with any
+          of the above, I'm your guy.
         </p>
+        <a href="mailto:obbengvincent@gmail.com"
+          ><Button>
+            Available for new projects <EnvelopeOpenIcon className="ml-2" />
+          </Button></a
+        >
       </div>
-      <div class="w-2/5"></div>
+      <div class="w-1/2"></div>
     </section>
   </main>
 </BaseLayout>

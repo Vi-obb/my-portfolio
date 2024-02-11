@@ -1,3 +1,5 @@
+const defaultTheme = require('tailwindcss/defaultTheme');
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   darkMode: ['class'],
@@ -16,9 +18,9 @@ module.exports = {
         'dark-green': '#1d3630',
         'off-white': '#f7f4ee',
         'light-green': '#becac4',
-        'black': '#06140e',
-        'tan': '#e1dfda',
-        'green': '#6e807a',
+        black: '#06140e',
+        tan: '#e1dfda',
+        green: '#6e807a',
         border: 'hsl(var(--border))',
         input: 'hsl(var(--input))',
         ring: 'hsl(var(--ring))',
@@ -54,7 +56,8 @@ module.exports = {
         },
       },
       fontFamily: {
-        'sans': ['Rethink Sans', 'sans-serif'],
+        sans: ['Geist Sans', ...defaultTheme.fontFamily.sans],
+        logo: ['Sedgwick Ave Display', 'cursive'],
       },
       borderRadius: {
         lg: 'var(--radius)',

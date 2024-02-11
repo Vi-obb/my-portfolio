@@ -5,39 +5,41 @@ import {
   TwitterLogoIcon,
 } from '@radix-ui/react-icons';
 
+let date = new Date();
+let year = date.getFullYear();
+let options = {
+  weekday: 'long',
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric',
+};
+let today = date.toLocaleDateString('en-US', options as Intl.DateTimeFormatOptions);
+let time = date.toLocaleTimeString();
 ---
 
 <footer class="py-5 flex items-start gap-3">
-      <div class="flex gap-3 items-center w-1/2">
-        <h2 class="text-sm font-semibold text-dark-green">Vincent Obbeng</h2>
-        <ul class="flex flex-row gap-3">
-          <li>
-            <a href="/"
-              ><GitHubLogoIcon
-                className="text-green hover:text-dark-green"
-              /></a
-            >
-          </li>
-          <li>
-            <a href="/"
-              ><DiscordLogoIcon
-                className="text-green hover:text-dark-green"
-              /></a
-            >
-          </li>
-          <li>
-            <a href="/"
-              ><TwitterLogoIcon
-                className="text-green hover:text-dark-green"
-              /></a
-            >
-          </li>
-        </ul>
-      </div>
-
-      <div class="flex items-end justify-end text-sm flex-col w-1/2">
-        <p>@2024, Vincent Obbeng</p>
-        <p>Accra, Ghana: GMT 0800hrs</p>
-        <p></p>
-      </div>
-    </footer>
+  <div class="flex text-sm flex-col w-1/2">
+    <p>&copy; {year}, Vincent Obbeng</p>
+    <p>Accra, Ghana - {time} GMT</p>
+    <p>{today}</p>
+  </div>
+  <div class="flex gap-3 items-end justify-end w-1/2">
+    <ul class="flex flex-row gap-3">
+      <li>
+        <a href="/"
+          ><GitHubLogoIcon className="text-green hover:text-dark-green" /></a
+        >
+      </li>
+      <li>
+        <a href="/"
+          ><DiscordLogoIcon className="text-green hover:text-dark-green" /></a
+        >
+      </li>
+      <li>
+        <a href="/"
+          ><TwitterLogoIcon className="text-green hover:text-dark-green" /></a
+        >
+      </li>
+    </ul>
+  </div>
+</footer>
