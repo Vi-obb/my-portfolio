@@ -2,16 +2,17 @@
 import BaseLayout from '@/Layouts/BaseLayout.astro';
 import { Button } from '@/components/ui/button';
 import { EnvelopeOpenIcon } from '@radix-ui/react-icons';
+import { Separator } from '@/components/ui/separator';
 
 const title = 'Vincent Obbeng | Web Developer & Designer';
 ---
 
 <BaseLayout title={title}>
   <main>
-    <section class="pb-10">
+    <section class="pb-20">
       <div class="w-1/2">
-        <h1 class="mb-3">Welcome to my digital kitchen.</h1>
-        <p class="text-pretty mb-3 leading-relaxed">
+        <h1 class="mb-2">Welcome to my digital kitchen.</h1>
+        <p class="text-pretty mb-5 leading-relaxed">
           <span class="font-semibold"
             >I'm Vincent, a web developer and designer based in Accra, Ghana. I
             love to make landing pages, marketing sites and application
@@ -26,6 +27,11 @@ const title = 'Vincent Obbeng | Web Developer & Designer';
         >
       </div>
       <div class="w-1/2"></div>
+    </section>
+    <Separator />
+    <section class="py-20">
+      <h2 class="mb-2">Recent projects</h2>
+
     </section>
   </main>
 </BaseLayout>
