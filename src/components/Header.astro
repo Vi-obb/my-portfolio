@@ -1,15 +1,17 @@
 ---
 import { Separator } from '@/components/ui/separator';
+import Toggle from '../components/Toggle';
 import {
   GitHubLogoIcon,
   DiscordLogoIcon,
   TwitterLogoIcon,
 } from '@radix-ui/react-icons';
+
 ---
 
 <header class="py-20">
   <nav class="flex flex-row items-center gap-3">
-    <div class="flex flex-row gap-3 items-center w-1/2">
+    <div class="hidden md:flex md:flex-row md:gap-3 md:items-center md:w-1/2">
       <ul class="flex flex-row gap-3">
         <li>
           <a href="/"
@@ -30,32 +32,33 @@ import {
       <Separator orientation="vertical" />
       <ul class="flex flex-row gap-3">
         <li
-          class="py-1 px-3 rounded text-sm text-dark-green hover:bg-off-white hover:text-dark-green"
+          class="py-1 px-3 rounded text-sm text-dark-green hover:bg-tan hover:text-dark-green"
         >
           <a href="/">Home</a>
         </li>
         <li
-          class="py-1 px-3 rounded text-sm text-dark-green hover:bg-off-white hover:text-dark-green"
+          class="py-1 px-3 rounded text-sm text-dark-green hover:bg-tan hover:text-dark-green"
         >
           <a href="/about">About</a>
         </li>
         <li
-          class="py-1 px-3 rounded text-sm text-dark-green hover:bg-off-white hover:text-dark-green"
+          class="py-1 px-3 rounded text-sm text-dark-green hover:bg-tan hover:text-dark-green"
         >
           <a href="/blog">Blog</a>
         </li>
         <li
-          class="py-1 px-3 rounded text-sm text-dark-green hover:bg-off-white hover:text-dark-green"
+          class="py-1 px-3 rounded text-sm text-dark-green hover:bg-tan hover:text-dark-green"
         >
           <a href="/projects">Projects</a>
         </li>
       </ul>
     </div>
 
-    <div class="w-1/2 flex flex-row justify-end items-center gap-3">
+    <div class="w-1/2 flex flex-row justify-start md:justify-end items-center gap-3">
       <a href="/" class="flex flex-row gap-2 items-center">
-        <h2 class="text-dark-green text-sm">Vincent Obbeng</h2>
+        <h2 class="text-dark-green">Vincent Obbeng</h2>
       </a>
     </div>
+    <Toggle client:load/>
   </nav>
 </header>
