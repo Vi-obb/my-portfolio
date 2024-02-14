@@ -8,7 +8,7 @@ export default function MenuToggle() {
     <div class="md:hidden w-1/2 flex flex-row justify-end">
       <button
         onClick={toggleMenu}
-        class="flex items-center px-3 py-2 rounded bg-dark-green"
+        class="flex items-center px-3 py-2 rounded bg-green hover:bg-dark-green"
       >
         <svg
           class="fill-white h-3 w-4"
