@@ -1,8 +1,10 @@
 ---
 import BaseLayout from '@/Layouts/BaseLayout.astro';
+import ProjectCard from '@/components/ProjectCard.astro';
 import { Button } from '@/components/ui/button';
 import { EnvelopeOpenIcon } from '@radix-ui/react-icons';
 import { Separator } from '@/components/ui/separator';
+import Projects from './projects.astro';
 
 const title = 'Vincent Obbeng | Web Developer & Designer';
 ---
@@ -31,9 +33,7 @@ const title = 'Vincent Obbeng | Web Developer & Designer';
     <Separator />
     <section class="py-20">
       <h2 class="mb-2">Recent projects</h2>
-      <div>
-
-      </div>
+      <ProjectCard />
     </section>
   </main>
 </BaseLayout>
