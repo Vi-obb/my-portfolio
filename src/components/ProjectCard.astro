@@ -1,10 +1,24 @@
 ---
-
+import { Button } from './ui/button';
+import { ArrowTopRightIcon } from '@radix-ui/react-icons';
 ---
 
-<div class="grid grid-cols-2 gap-4 md:grid-cols-4 md:gap-8">
-    <div>1</div>
-    <div>2</div>
-    <div>3</div>
-    <div>4</div>
+<div class="grid grid-cols-2 gap-6 md:grid-cols-4 md:gap-8">
+  <div class="h-44 relative">
+    <div class="text-sm mb-3">
+      <h2 class="mb-1">Smoove Website</h2>
+      <p class="text-black/50 text-balance">
+        News website for media company Smoove. Designed in Figma and built with
+        NextJS
+      </p>
+    </div>
+    <div class="absolute left-0 bottom-0">
+      <Button size="sm">
+        View website <ArrowTopRightIcon className="ml-2" />
+      </Button>
+    </div>
+  </div>
+  <div class="h-44">2</div>
+  <div class="h-44">3</div>
+  <div class="h-44">4</div>
 </div>
