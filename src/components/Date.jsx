@@ -1,5 +1,3 @@
-import React, { useState, useEffect } from "react";
-
 const DateComponent = () => {
     const currentDate = new Date();
 
@@ -13,7 +11,7 @@ const DateComponent = () => {
     const dayOfMonth = currentDate.getDate();
     const year = currentDate.getFullYear();
     const hours = currentDate.getHours();
-    const minutes = currentDate.getMinutes();
+    const minutes = currentDate.getMinutes().toString().padStart(2, '0');
    
     const ampm = hours >= 12 ? 'PM' : 'AM';
 
