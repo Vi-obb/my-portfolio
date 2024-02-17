@@ -17,7 +17,7 @@ const DateComponent = () => {
    
     const ampm = hours >= 12 ? 'PM' : 'AM';
 
-    const time = `${hours}:${minutes}:${ampm} GMT`;
+    const time = `${hours}:${minutes} ${ampm} GMT`;
     const today = `${day}, ${month} ${dayOfMonth}, ${year}`;
 
     return (
