@@ -3,41 +3,35 @@ import {
   GitHubLogoIcon,
   DiscordLogoIcon,
   TwitterLogoIcon,
-} from '@radix-ui/react-icons';
+} from "@radix-ui/react-icons";
 
-let date = new Date();
-let year = date.getFullYear();
-let options = {
-  weekday: 'long',
-  year: 'numeric',
-  month: 'long',
-  day: 'numeric',
-};
-let today = date.toLocaleDateString('en-US', options as Intl.DateTimeFormatOptions);
-let time = date.toLocaleTimeString();
+import DateComponent from "../components/Date.jsx";
 ---
 
 <footer class="py-5 flex items-start gap-3">
-  <div class="flex text-sm flex-col w-3/5 md:w-1/2">
-    <p>&copy; {year}, Vincent Obbeng</p>
-    <p>Accra, Ghana - {time} GMT</p>
-    <p>{today}</p>
-  </div>
+  <DateComponent client:load/>
+
   <div class="flex gap-3 items-end justify-end w-2/5 md:w-1/2">
     <ul class="flex flex-row gap-4">
       <li>
         <a href="https://github.com/Vi-obb"
-          ><GitHubLogoIcon className="text-dark-green hover:text-green h-5 w-5" /></a
+          ><GitHubLogoIcon
+            className="text-dark-green hover:text-green h-5 w-5"
+          /></a
         >
       </li>
       <li>
         <a href="https://www.discordapp.com/users/719253504547487794"
-          ><DiscordLogoIcon className="text-dark-green hover:text-green h-5 w-5" /></a
+          ><DiscordLogoIcon
+            className="text-dark-green hover:text-green h-5 w-5"
+          /></a
         >
       </li>
       <li>
         <a href="https://twitter.com/FiifiObbeng"
-          ><TwitterLogoIcon className="text-dark-green hover:text-green h-5 w-5" /></a
+          ><TwitterLogoIcon
+            className="text-dark-green hover:text-green h-5 w-5"
+          /></a
         >
       </li>
     </ul>
