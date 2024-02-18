@@ -1,21 +1,23 @@
 ---
 import { Button } from './ui/button';
 import { ArrowTopRightIcon } from '@radix-ui/react-icons';
+const { title, url, description } = Astro.props;
 ---
 
 <div class="grid grid-cols-2 gap-6 md:grid-cols-4 md:gap-8">
   <div class="h-44 relative">
     <div class="text-sm mb-3">
-      <h2 class="mb-1">Smoove Website</h2>
+      <h2 class="mb-1">{title}</h2>
       <p class="text-black/50 text-balance">
-        News website for media company Smoove. Designed in Figma and built with
-        NextJS
+        {description}
       </p>
     </div>
     <div class="absolute left-0 bottom-0">
-      <Button size="sm">
-        View website <ArrowTopRightIcon className="ml-2" />
-      </Button>
+      <a href={url}>
+        <Button size="sm">
+          More details <ArrowTopRightIcon className="ml-2" />
+        </Button>
+      </a>
     </div>
   </div>
   <div class="h-44">2</div>

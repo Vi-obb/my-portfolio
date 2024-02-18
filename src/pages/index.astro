@@ -1,10 +1,12 @@
 ---
-import BaseLayout from '@/Layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+import BaseLayout from '@/layouts/BaseLayout.astro';
 import ProjectCard from '@/components/ProjectCard.astro';
 import { Button } from '@/components/ui/button';
 import { EnvelopeOpenIcon } from '@radix-ui/react-icons';
 import { Separator } from '@/components/ui/separator';
 
+const allProjects = await getCollection('projects');
 
 const title = 'Vincent Obbeng | Web Developer & Designer';
 ---
@@ -13,7 +15,9 @@ const title = 'Vincent Obbeng | Web Developer & Designer';
   <main>
     <section class="pb-20">
       <div class="md:w-1/2">
-        <h1 class="mb-6 text-3xl font-medium md:text-4xl text-balance">Step Into My Digital Playground</h1>
+        <h1 class="mb-6 text-3xl font-medium md:text-4xl text-balance">
+          Step Into My Digital Playground
+        </h1>
         <p class="text-balance mb-6 leading-relaxed">
           <span class="font-semibold text-dark-green"
             >I'm Vincent, a web developer and designer based in Accra, Ghana. I
@@ -33,7 +37,16 @@ const title = 'Vincent Obbeng | Web Developer & Designer';
     <Separator />
     <section class="py-20">
       <h2 class="mb-10">Recent projects</h2>
-      <ProjectCard />
+      <!-- <ProjectCard /> -->
+        {
+          allProjects.map((work) => (
+            <ProjectCard
+              url={`/projects/${work.slug}/`}
+              title={work.data.title}
+              description={work.data.description}
+            />
+          ))
+        }
     </section>
   </main>
 </BaseLayout>

@@ -1,8 +1,8 @@
 ---
-title: 'Why I love Astro'
+title: 'Smoove Website'
 color: 'black'
 tags: ["astro", "blogging", "learning in public"]
-description: 'This is the first post of my new Astro blog.'
+description: 'News website for media company Smoove. Designed in Figma and built with NextJS.'
 details:
     cost: '$2,000'
     time: '3 months'
