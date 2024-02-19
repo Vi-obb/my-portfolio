@@ -4,7 +4,6 @@ import BaseLayout from '@/Layouts/BaseLayout.astro';
 import ProjectCard from '@/components/ProjectCard.astro';
 import { Button } from '@/components/ui/button';
 import { EnvelopeOpenIcon } from '@radix-ui/react-icons';
-import { Separator } from '@/components/ui/separator';
 
 const allProjects = await getCollection('projects');
 
@@ -37,7 +36,6 @@ const title = 'Vincent Obbeng | Web Developer & Designer';
       </div>
       <div class="hidden md:w-1/2"></div>
     </section>
-    <!-- <Separator /> -->
     <section class="py-20">
       <h2 class="mb-10 font-medium">Recent projects</h2>
       {
