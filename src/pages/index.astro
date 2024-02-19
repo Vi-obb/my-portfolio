@@ -1,6 +1,6 @@
 ---
 import { getCollection } from 'astro:content';
-import BaseLayout from '@/layouts/BaseLayout.astro';
+import BaseLayout from '@/Layouts/BaseLayout.astro';
 import ProjectCard from '@/components/ProjectCard.astro';
 import { Button } from '@/components/ui/button';
 import { EnvelopeOpenIcon } from '@radix-ui/react-icons';
@@ -30,7 +30,7 @@ const title = 'Vincent Obbeng | Web Developer & Designer';
           any of the above, I'm your guy!
         </p>
         <a href="mailto:obbengvincent@gmail.com"
-          ><Button size="lg">
+          ><Button>
             Available for new projects <EnvelopeOpenIcon className="ml-2" />
           </Button></a
         >
