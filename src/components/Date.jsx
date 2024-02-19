@@ -19,11 +19,11 @@ const DateComponent = () => {
     const today = `${day}, ${month} ${dayOfMonth}, ${year}`
 
     return (
-        <div className="flex text-sm flex-col w-3/5 md:w-1/2">
-            <p>&copy; {year}, Vincent Obbeng</p>
-            <p>Accra, Ghana - {time}</p>
-            <p>{today}</p>
-        </div>
+      <div className="flex text-sm flex-col w-3/5 md:w-1/2 text-white/50">
+        <p>&copy; {year}, Vincent Obbeng</p>
+        <p>Accra, Ghana - {time}</p>
+        <p>{today}</p>
+      </div>
     );
 };
 

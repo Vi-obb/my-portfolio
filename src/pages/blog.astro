@@ -1,22 +1,33 @@
 ---
-import { getCollection } from "astro:content";
-import BaseLayout from "@/layouts/BaseLayout.astro";
-import BlogCard from "@/components/BlogCard.astro";
+import { getCollection } from 'astro:content';
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import BlogCard from '@/components/BlogCard.astro';
 
-const allBlogs = await getCollection("blog");
+const allBlogs = await getCollection('blog');
 
 const title = 'Wanderings';
 ---
 
 <BaseLayout title={title}>
-  <h1 class="mb-6 text-3xl font-medium md:text-4xl text-balance">
-    This is my blog, where stories unfold
-  </h1>
-  <ol>
+  <section class="py-20 font-Neue">
+    <!--  -->
+    <div class="flex flex-row items-center">
+      <div class="md:w-1/2">
+        <h1 class="text-3xl font-Pangaia font-medium md:text-4xl text-balance">
+          This is my blog, where stories unfold
+        </h1>
+        <p class="text-base md:text-xl text-pretty">
+          I write about my travels, my thoughts, and my experiences. I hope you enjoy reading them as much as I enjoy writing them.
+        </p>
+      </div>
+      <div class="hidden md:block"></div>
+    </div>
+  </section>
+  <div>
     {
       allBlogs.map((blog) => (
         <BlogCard url={`/blog/${blog.slug}/`} title={blog.data.title} />
       ))
     }
-  </ol>
+  </div>
 </BaseLayout>

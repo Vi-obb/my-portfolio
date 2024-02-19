@@ -1,12 +1,12 @@
 ---
 title: 'Smoove Website'
-color: 'black'
+color: 'orange'
 tags: ["astro", "blogging", "learning in public"]
 description: 'News website for media company Smoove. Designed in Figma and built with NextJS.'
 details:
     cost: '$2,000'
     time: '3 months'
-    from: 'Twitter'
+    from: 'Elorm Gabby'
     team: ['Vincent Obbeng']
 images: 
   - url: "https://example.com/image1.png"

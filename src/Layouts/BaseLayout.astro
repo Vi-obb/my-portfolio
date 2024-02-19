@@ -15,7 +15,7 @@ import Footer from '@/components/Footer.astro';
 const { title } = Astro.props;
 ---
 
-<html lang="en" class="scrollbar-thin scrollbar-thumb-dark-green scrollbar-track-green">
+<html lang="en" class="scrollbar-thin scrollbar-thumb-black scrollbar-track-blurple">
   <head>
     <meta charset="utf-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -23,7 +23,7 @@ const { title } = Astro.props;
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
   </head>
-  <body class="container bg-black text-white px-6 md:px-24 lg:px-44">
+  <body class="container bg-black text-white px-6 md:px-10">
     <Header />
     <slot />
     <Footer />
