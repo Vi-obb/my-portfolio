@@ -17,17 +17,33 @@ const title = 'Wanderings';
           This is my blog, where stories unfold
         </h1>
         <p class="text-base md:text-xl text-pretty">
-          I write about my travels, my thoughts, and my experiences. I hope you enjoy reading them as much as I enjoy writing them.
+          I write about my interests: design, math, food, programming and
+          anything I fall in love with along the way. I hope you enjoy reading
+          them as much as I enjoy writing them.
         </p>
       </div>
       <div class="hidden md:block"></div>
     </div>
   </section>
-  <div>
+  <div class="grid grid-cols-1 divide-y-2 divide-dashed divide-white/50 gap-3">
     {
-      allBlogs.map((blog) => (
-        <BlogCard url={`/blog/${blog.slug}/`} title={blog.data.title} />
-      ))
+      allBlogs.map((blog) => {
+        const date = new Date(blog.data.pubDate);
+        const formattedDate = date.toLocaleDateString('en-US', {
+          year: 'numeric',
+          month: 'long',
+          day: 'numeric',
+        });
+
+        return (
+          <BlogCard
+            url={`/blog/${blog.slug}/`}
+            title={blog.data.title}
+            description={blog.data.description}
+            pubDate={formattedDate}
+          />
+        );
+      })
     }
   </div>
 </BaseLayout>

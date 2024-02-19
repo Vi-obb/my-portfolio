@@ -1,5 +1,13 @@
 ---
-const { title, url } = Astro.props;
+const { title, url, description, pubDate } = Astro.props;
 ---
 
-<div><a href={url}>{title}</a></div>
+<a href={url} class="group">
+  <div class="font-Neue py-2">
+    <div class="mb-3">
+      <p class="group-hover:underline group-hover:decoration-blurple group-hover:decoration-2">{title}</p>
+      <p>{description}</p>
+    </div>
+    <p class="text-white/50">{pubDate}</p>
+  </div>
+</a>
