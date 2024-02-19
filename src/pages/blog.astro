@@ -25,25 +25,29 @@ const title = 'Wanderings';
       <div class="hidden md:block"></div>
     </div>
   </section>
-  <div class="grid grid-cols-1 divide-y-2 divide-dashed divide-white/50 gap-3">
-    {
-      allBlogs.map((blog) => {
-        const date = new Date(blog.data.pubDate);
-        const formattedDate = date.toLocaleDateString('en-US', {
-          year: 'numeric',
-          month: 'long',
-          day: 'numeric',
-        });
+  <section class="pb-20">
+    <div
+      class="grid grid-cols-1 divide-y-2 divide-dashed divide-white/50 gap-3"
+    >
+      {
+        allBlogs.map((blog) => {
+          const date = new Date(blog.data.pubDate);
+          const formattedDate = date.toLocaleDateString('en-US', {
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric',
+          });
 
-        return (
-          <BlogCard
-            url={`/blog/${blog.slug}/`}
-            title={blog.data.title}
-            description={blog.data.description}
-            pubDate={formattedDate}
-          />
-        );
-      })
-    }
-  </div>
+          return (
+            <BlogCard
+              url={`/blog/${blog.slug}/`}
+              title={blog.data.title}
+              description={blog.data.description}
+              pubDate={formattedDate}
+            />
+          );
+        })
+      }
+    </div>
+  </section>
 </BaseLayout>
