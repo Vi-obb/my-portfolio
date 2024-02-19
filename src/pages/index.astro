@@ -12,19 +12,14 @@ const title = 'Vincent Obbeng | Web Developer & Designer';
 ---
 
 <BaseLayout title={title}>
-  <main>
+  <main class="font-Neue">
     <section class="pb-20">
       <div class="md:w-1/2">
-        <h1 class="mb-6 text-3xl font-medium md:text-4xl text-balance">
-          Step Into My Digital Playground
-        </h1>
-        <p class="text-balance mb-6 leading-relaxed">
-          <span class="font-semibold text-dark-green"
-            >I'm Vincent, a web developer and designer based in Accra, Ghana. I
-            love to make landing pages, marketing sites and application
-            interfaces.</span
-          > Still finding more stuff to be good at but if you need help with any
-          of the above, I'm your guy.
+        <p class="text-balance mb-8 font-medium leading-relaxed">
+          I'm Vincent, a web developer and designer based in Accra, Ghana. I
+          love to make <span class="font-Pangaia italic text-light-blurple mx-1">landing pages</span>, <span class="font-Pangaia italic text-light-blurple mx-1">marketing sites</span> and <span class="font-Pangaia italic text-light-blurple mx-1">application
+          interfaces</span>. Still finding more stuff to be good at but if you need
+          help with any of the above, I'm your guy!
         </p>
         <a href="mailto:obbengvincent@gmail.com"
           ><Button size="lg">
@@ -36,17 +31,16 @@ const title = 'Vincent Obbeng | Web Developer & Designer';
     </section>
     <Separator />
     <section class="py-20">
-      <h2 class="mb-10">Recent projects</h2>
-      <!-- <ProjectCard /> -->
-        {
-          allProjects.map((work) => (
-            <ProjectCard
-              url={`/projects/${work.slug}/`}
-              title={work.data.title}
-              description={work.data.description}
-            />
-          ))
-        }
+      <h2 class="mb-10 font-medium">Recent projects</h2>
+      {
+        allProjects.map((work) => (
+          <ProjectCard
+            url={`/projects/${work.slug}/`}
+            title={work.data.title}
+            description={work.data.description}
+          />
+        ))
+      }
     </section>
   </main>
 </BaseLayout>

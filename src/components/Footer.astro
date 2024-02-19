@@ -3,36 +3,24 @@ import {
   GitHubLogoIcon,
   DiscordLogoIcon,
   TwitterLogoIcon,
-} from "@radix-ui/react-icons";
+} from '@radix-ui/react-icons';
 
-import DateComponent from "../components/Date.jsx";
+import DateComponent from '../components/Date.jsx';
 ---
 
 <footer class="py-5 flex items-start gap-3">
-  <DateComponent client:load/>
+  <DateComponent client:load />
 
-  <div class="flex gap-3 items-end justify-end w-2/5 md:w-1/2">
+  <div class="flex gap-3 font-Pangaia font-medium text-sm items-end justify-end w-2/5 md:w-1/2">
     <ul class="flex flex-row gap-4">
-      <li>
-        <a href="https://github.com/Vi-obb"
-          ><GitHubLogoIcon
-            className="text-dark-green hover:text-green h-5 w-5"
-          /></a
-        >
+      <li class="hover:underline hover:decoration-blurple hover:decoration-2">
+        <a href="https://github.com/Vi-obb">Github</a>
       </li>
-      <li>
-        <a href="https://www.discordapp.com/users/719253504547487794"
-          ><DiscordLogoIcon
-            className="text-dark-green hover:text-green h-5 w-5"
-          /></a
-        >
+      <li class="hover:underline hover:decoration-blurple hover:decoration-2">
+        <a href="https://www.discordapp.com/users/719253504547487794">Discord</a>
       </li>
-      <li>
-        <a href="https://twitter.com/FiifiObbeng"
-          ><TwitterLogoIcon
-            className="text-dark-green hover:text-green h-5 w-5"
-          /></a
-        >
+      <li class="hover:underline hover:decoration-blurple hover:decoration-2">
+        <a href="https://twitter.com/FiifiObbeng">Twitter/X</a>
       </li>
     </ul>
   </div>

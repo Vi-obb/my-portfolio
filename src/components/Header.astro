@@ -1,65 +1,50 @@
 ---
 import { Separator } from '@/components/ui/separator';
-import {
-  GitHubLogoIcon,
-  DiscordLogoIcon,
-  TwitterLogoIcon,
-} from '@radix-ui/react-icons';
 ---
 
 <header class="py-20">
-  <nav class="flex flex-row items-center gap-3 relative">
+  <nav class="flex flex-row items-center gap-3">
     <div
-      class="flex flex-col md:flex-row gap-3 md:items-center w-full md:w-1/2"
+      class="flex font-Pangaia font-medium text-sm flex-row gap-4 md:items-center w-full md:w-1/2"
     >
-      <ul class="flex flex-row gap-4 px-3 md:px-0">
-        <li>
-          <a href="https://github.com/Vi-obb"
-            ><GitHubLogoIcon
-              className="text-dark-green hover:text-green w-5 h-5"
-            /></a
-          >
+      <ul class="flex flex-row gap-4">
+        <li class="hover:underline hover:decoration-blurple hover:decoration-2">
+          <a href="https://github.com/Vi-obb"> Github</a>
         </li>
-        <li>
+        <li class="hover:underline hover:decoration-blurple hover:decoration-2">
           <a href="https://www.discordapp.com/users/719253504547487794"
-            ><DiscordLogoIcon
-              className="text-dark-green hover:text-green w-5 h-5"
-            /></a
+            >Discord</a
           >
         </li>
-        <li>
-          <a href="https://www.twitter.com/FiifiObbeng"
-            ><TwitterLogoIcon
-              className="text-dark-green hover:text-green w-5 h-5"
-            /></a
-          >
+        <li class="hover:underline hover:decoration-blurple hover:decoration-2">
+          <a href="https://www.twitter.com/FiifiObbeng">Twitter/X</a>
         </li>
       </ul>
-      <div class="hidden md:block">
+      <div>
         <Separator orientation="vertical" />
       </div>
 
-      <ul class="flex flex-row gap-3 items-start">
+      <ul class="flex flex-row gap-4 items-start">
         <li
-          class="py-1 px-3 rounded inline-flex text-sm text-dark-green hover:bg-tan hover:text-dark-green"
+          class="hover:underline hover:decoration-blurple hover:decoration-2"
         >
           <a href="/">Home</a>
         </li>
         <li
-          class="py-1 px-3 rounded inline-flex text-sm text-dark-green hover:bg-tan hover:text-dark-green"
+          class="hover:underline hover:decoration-blurple hover:decoration-2"
         >
-          <a href="/about">About</a>
+          <a href="/about">Get to Know Me</a>
         </li>
         <li
-          class="py-1 px-3 rounded inline-flex text-sm text-dark-green hover:bg-tan hover:text-dark-green"
+          class="hover:underline hover:decoration-blurple hover:decoration-2"
         >
-          <a href="/blog">Blog</a>
+          <a href="/blog">Writing</a>
         </li>
       </ul>
     </div>
 
     <div
-      class="w-full absolute right-0 top-0 md:w-1/2 flex justify-end items-start md:items-center"
+      class="w-full font-Pangaia hidden  md:w-1/2 md:flex justify-end items-start md:items-center"
     >
       <a href="/">
         <h2 class="text-dark-green align-self-start">Vincent Obbeng</h2>

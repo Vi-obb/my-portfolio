@@ -14,13 +14,12 @@ module.exports = {
       },
     },
     extend: {
+      
       colors: {
-        'dark-green': '#1d3630',
-        'off-white': '#f7f4ee',
-        'light-green': '#becac4',
-        black: '#06140e',
-        tan: '#e1dfda',
-        green: '#6e807a',
+        'blurple': '#5865f2',
+        'dark-blurple': '#4954ca',
+        'light-blurple': '#747ff4',
+        black: '#010107',
         border: 'hsl(var(--border))',
         input: 'hsl(var(--input))',
         ring: 'hsl(var(--ring))',
@@ -56,8 +55,9 @@ module.exports = {
         },
       },
       fontFamily: {
-        sans: ['Geist Sans', ...defaultTheme.fontFamily.sans],
-        logo: ['Sedgwick Ave Display', 'cursive'],
+        // sans: ['Geist Sans', ...defaultTheme.fontFamily.sans],
+        Neue: ['Neue Montreal', 'sans-serif'],
+        Pangaia: ['Pangaia', 'serif'],
       },
       borderRadius: {
         lg: 'var(--radius)',
