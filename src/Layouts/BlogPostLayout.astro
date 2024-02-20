@@ -4,20 +4,24 @@ const { frontmatter } = Astro.props;
 ---
 
 <BaseLayout title={frontmatter.title}>
-  <h1>{frontmatter.title}</h1>
-  <p><em>{frontmatter.description}</em></p>
-  <img src={frontmatter.image.url} width="300" alt={frontmatter.image.alt} />
-
-  <div class="tags">
-    {
-      frontmatter.tags.map((tag) => (
-        <p class="tag">
-          <a href={`/tags/${tag}`}>{tag}</a>
+  <section
+    id="details"
+    class="pt-20 pb-10 flex flex-col gap-4 font-Neue border-b-2 border-dashed border-white/50"
+  >
+    <div class="flex flex-row items-center">
+      <div class="md:w-1/2">
+        <h1 class="font-Pangaia text-3xl md:text-4xl">{frontmatter.title}</h1>
+        <p class="text-base md:text-xl text-pretty">
+          {frontmatter.description}
         </p>
-      ))
-    }
-  </div>
-
-  <p>Published on: {frontmatter.pubDate.toString().slice(0, 10)}</p>
-  <slot />
+      </div>
+      <div class="hidden md:block"></div>
+    </div>
+    <ol class="tags flex flex-row gap-3">
+      {frontmatter.tags.map((tag) => <li class="tag text-sm md:text-base text-white/50">{tag}</li>)}
+    </ol>
+  </section>
+  <section class="font-Neue pt-10 pb-20">
+    <slot />
+  </section>
 </BaseLayout>
