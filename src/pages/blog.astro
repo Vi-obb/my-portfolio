@@ -5,15 +5,14 @@ import BlogCard from '../components/BlogCard.astro';
 
 const allBlogs = await getCollection('blog');
 
-const title = 'Wanderings';
+const title = 'Writing';
 ---
 
 <BaseLayout title={title}>
   <section class="py-20 font-Neue">
-    <!--  -->
     <div class="flex flex-row items-center">
       <div class="md:w-1/2">
-        <h1 class="text-3xl font-Pangaia font-medium md:text-4xl text-balance">
+        <h1 class="text-3xl font-Pangaia font-medium md:text-4xl text-balance mb-2">
           This is my blog, where stories unfold
         </h1>
         <p class="text-base md:text-xl text-pretty">
