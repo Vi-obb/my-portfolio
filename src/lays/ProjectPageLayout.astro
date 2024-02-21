@@ -4,11 +4,11 @@ const { frontmatter } = Astro.props;
 ---
 
 <BaseLayout title={frontmatter.title}>
-  <section id="details" class="py-20 flex flex-col gap-8 font-Neue border-b-2 border-dashed border-white/50">
+  <section id="details" class="pt-20 pb-10 flex flex-col gap-6 md:gap-8 font-Neue border-b-2 border-dashed border-white/50">
     <div class="flex flex-row items-center">
       <div class="md:w-1/2">
-        <h1 class="font-Pangaia text-3xl md:text-4xl">{frontmatter.title}</h1>
-        <p class="text-base md:text-xl text-pretty">
+        <h1 class="font-Pangaia text-3xl md:text-4xl mb-2">{frontmatter.title}</h1>
+        <p class="text-base md:text-xl text-balance">
           {frontmatter.description}
         </p>
       </div>
@@ -16,8 +16,8 @@ const { frontmatter } = Astro.props;
     </div>
     <div class="grid grid-cols-2 gap-6 md:grid-cols-4 md:gap-8">
       <div>
-        <p class="text-white/50 text-xs md:text-sm">Client</p>
-        <p class="text-sm md:text-base">{frontmatter.details.from}</p>
+        <p class="text-white/50 text-xs md:text-sm">Project Type</p>
+        <p class="text-sm md:text-base">{frontmatter.tags[0]}</p>
       </div>
       <div>
         <p class="text-white/50 text-xs md:text-sm">Time</p>
@@ -33,5 +33,5 @@ const { frontmatter } = Astro.props;
       </div>
     </div>
   </section>
-  <section id="images"></section>
+  <section id="images" class="pt-10 pb-20"></section>
 </BaseLayout>
