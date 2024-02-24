@@ -1,26 +1,41 @@
 ---
 import { Button } from './ui/button';
 import { ArrowTopRightIcon } from '@radix-ui/react-icons';
-const { title, url, description } = Astro.props;
+const { title, url, description, images } = Astro.props;
 ---
 
-<div class="grid grid-cols-2 gap-6 md:grid-cols-4 md:gap-8">
+<div
+  class="grid grid-cols-2 gap-6 md:grid-cols-4 md:gap-8 mb-8 md:mb-10 pb-4 md:pb-6 border-b-2 border-dashed border-white/50"
+>
   <div class="h-44 relative">
     <div class="text-sm mb-3">
       <h2 class="mb-1">{title}</h2>
-      <p class="text-white/50 text-balance">
+      <p class="text-white/50 text-pretty">
         {description}
       </p>
     </div>
     <div class="absolute left-0 bottom-0">
       <a href={url}>
         <Button size="sm">
-          More details <ArrowTopRightIcon className="ml-2" />
+          Take a look <ArrowTopRightIcon className="ml-2" />
         </Button>
       </a>
     </div>
   </div>
-  <div class="h-44">2</div>
-  <div class="h-44">3</div>
-  <div class="h-44">4</div>
+
+  <img
+    src={images.url[0]}
+    alt={images.alt[0]}
+    class="rounded-md grayscale-0 hover:scale-105 hover:rotate-2 md:grayscale hover:md:grayscale-0 object-cover"
+  />
+  <img
+    src={images.url[1]}
+    alt={images.alt[1]}
+    class="rounded-md grayscale-0 hover:scale-105 hover:rotate-2 md:grayscale hover:md:grayscale-0 object-cover"
+  />
+  <img
+    src={images.url[2]}
+    alt={images.alt[2]}
+    class="rounded-md grayscale-0 hover:scale-105 hover:rotate-2 md:grayscale hover:md:grayscale-0 object-cover"
+  />
 </div>
