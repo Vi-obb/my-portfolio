@@ -30,14 +30,10 @@ const projectCollection = defineCollection({
       from: z.string(),
       team: z.array(z.string()),
     }),
-    images: z.tuple([
-      z.object({ url: z.string(), alt: z.string() }),
-      z.object({ url: z.string(), alt: z.string() }),
-      z.object({ url: z.string(), alt: z.string() }),
-      z.object({ url: z.string(), alt: z.string() }),
-      z.object({ url: z.string(), alt: z.string() }),
-      z.object({ url: z.string(), alt: z.string() }),
-    ]),
+    images: z.object({
+      url: z.array(z.string()),
+      alt: z.array(z.string()),
+    }),
   }),
 });
 
