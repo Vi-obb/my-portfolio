@@ -11,4 +11,5 @@ details:
 images:
     url: ["/images/ckodon_cut_1.svg", "/images/ckodon_cut_2.svg", "/images/ckodon_cut_3.svg"]
     alt: ["Ckodon Project Image 1", "Ckodon Project Image 2", "Ckodon Project Image 3"]
+draft: false
 ---
