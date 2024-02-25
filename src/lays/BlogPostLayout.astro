@@ -4,24 +4,37 @@ const { frontmatter } = Astro.props;
 ---
 
 <BaseLayout title={frontmatter.title}>
-  <section
-    id="details"
-    class="py-10 md:py-20 flex flex-col gap-4 font-Neue"
-  >
+  <section id="details" class="py-10 md:py-20 flex flex-col gap-2 font-Neue">
     <div class="flex flex-row items-center">
       <div class="md:w-1/2">
         <h1 class="font-Pangaia text-3xl md:text-4xl">{frontmatter.title}</h1>
-        <p class="text-base md:text-xl text-pretty">
-          {frontmatter.description}
-        </p>
       </div>
       <div class="hidden md:block"></div>
     </div>
-    <ol class="tags flex flex-row gap-2">
-      {frontmatter.tags.map((tag) => <li class="tag text-sm md:text-base text-white/50">{tag}</li>)}
-    </ol>
+    <div class="text-light-blurple">
+      {
+        frontmatter.tags.map((tag, index) => (
+          <span>
+            {tag}
+            {index < frontmatter.tags.length - 1 ? ' · ' : ''}
+          </span>
+        ))
+      }
+    </div>
   </section>
-  <article class="prose font-Neue pb-10 md:pb-20">
+  <article
+    class="prose font-Neue text-white/50 prose-headings:text-white
+     prose-h2:text-xl prose-h2:md:text-2xl prose-h2:font-Pangaia
+      prose-p:md:text-lg prose-p:text-base pb-10 md:pb-20 prose-headings:font-normal
+      prose-h2:underline prose-h2:underline-2 prose-h2:decoration-blurple
+      prose-h3:text-base prose-h3:md:text-lg prose-em:text-white
+      prose-strong:text-white prose-strong:font-normal
+      prose-hr:border-blurple prose-hr:my-16 prose-hr:w-1/5 prose-hr:mx-auto
+      prose-a:text-white prose-a:underline prose-a:decoration-blurple prose-a:underline-2 prose-a:visited:text-blurple
+      prose-blockquote:border-blurple prose-blockquote:my-16 prose-blockquote:px-4 prose-blockquote:p-2 prose-blockquote:bg-white/10 prose-blockquote:text-white
+      prose-code:bg-white/10 prose-code:rounded prose-code:p-1 prose-code:text-light-blurple prose-code:font-mono prose-code:text-xs
+      prose-ul:list-image-[url(/images/asterisk-solid.svg)]"
+  >
     <slot />
   </article>
 </BaseLayout>
