@@ -6,7 +6,7 @@ const { frontmatter } = Astro.props;
 <BaseLayout title={frontmatter.title}>
   <section
     id="details"
-    class="py-10 md:py-20 flex flex-col gap-4 font-Neue border-b-2 border-dashed border-white/50"
+    class="py-10 md:py-20 flex flex-col gap-4 font-Neue"
   >
     <div class="flex flex-row items-center">
       <div class="md:w-1/2">
@@ -17,11 +17,11 @@ const { frontmatter } = Astro.props;
       </div>
       <div class="hidden md:block"></div>
     </div>
-    <ol class="tags flex flex-row gap-3">
+    <ol class="tags flex flex-row gap-2">
       {frontmatter.tags.map((tag) => <li class="tag text-sm md:text-base text-white/50">{tag}</li>)}
     </ol>
   </section>
-  <article class="font-Neue py-10 md:py-20">
+  <article class="prose font-Neue pb-10 md:pb-20">
     <slot />
   </article>
 </BaseLayout>

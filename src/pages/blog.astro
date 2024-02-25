@@ -3,7 +3,9 @@ import { getCollection } from 'astro:content';
 import BaseLayout from '../lays/BaseLayout.astro';
 import BlogCard from '../components/BlogCard.astro';
 
-const allBlogs = await getCollection('blog');
+const allBlogs = await getCollection('blog', ({ data }) => {
+  return import.meta.env.PROD ? data.draft !== true : true;
+});
 
 const title = 'Writing';
 ---
@@ -12,7 +14,9 @@ const title = 'Writing';
   <section class="py-10 md:py-20 font-Neue">
     <div class="flex flex-row items-center">
       <div class="md:w-1/2">
-        <h1 class="text-3xl font-Pangaia font-medium md:text-4xl text-balance mb-2">
+        <h1
+          class="text-3xl font-Pangaia font-medium md:text-4xl text-balance mb-2"
+        >
           This is my blog, where stories unfold
         </h1>
         <p class="text-base md:text-xl text-pretty">
@@ -24,10 +28,8 @@ const title = 'Writing';
       <div class="hidden md:block"></div>
     </div>
   </section>
-  <section class="py-10 md:py-20">
-    <div
-      class="grid grid-cols-1 divide-y-2 divide-dashed divide-white/50 gap-3"
-    >
+  <section class="pb-10 md:pb-20">
+    <div class="grid grid-cols-1 gap-3">
       {
         allBlogs.map((blog) => {
           const date = new Date(blog.data.pubDate);
