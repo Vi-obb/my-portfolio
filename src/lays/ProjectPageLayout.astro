@@ -4,7 +4,7 @@ const { frontmatter } = Astro.props;
 ---
 
 <BaseLayout title={frontmatter.title}>
-  <section id="details" class="py-10 md:py-20 flex flex-col gap-6 md:gap-8 font-Neue border-b-2 border-dashed border-white/50">
+  <section id="details" class="py-10 md:py-20 flex flex-col gap-6 md:gap-8 font-Neue">
     <div class="flex flex-row items-center">
       <div class="md:w-1/2">
         <h1 class="font-Pangaia text-3xl md:text-4xl mb-2">{frontmatter.title}</h1>
@@ -33,7 +33,7 @@ const { frontmatter } = Astro.props;
       </div>
     </div>
   </section>
-  <section id="images" class="py-10 md:py-20">
+  <section id="images" class="pb-10 md:pb-20">
     {frontmatter.images.url.slice().reverse().map((url, index) => (
       <img src={url} alt={frontmatter.images.alt[frontmatter.images.alt.length - 1 - index]} class="mb-10 md:mb-16" />
     ))}
