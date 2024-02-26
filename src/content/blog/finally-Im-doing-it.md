@@ -19,7 +19,7 @@ Found out about [Astro](https://astro.build/) in 2022 (I think). I saved [Traver
 
 For the first time I set out straight to code, no designs whatsoever. I knew if I took time to design before I built, the chances of me finishing were almost nonexistent (happened so many times). I made some sketches though, of how I wanted my `project cards` to be displayed.
 
-![Project card sketch](/images/sketch.PNG)
+![Project card sketch](https://the-boy-246.sirv.com/Other%20images/sketch.PNG)
 
 As I went along, I visited the websites of some of my favorite designers where I picked some ideas for how I wanted my portfolio site to turn out. Below are the links to their sites:
 

@@ -8,7 +8,7 @@ details:
     client: 'Personal Project'
     team: ['Me']
 images:
-    url: ["/images/fab-1.png", "/images/fab-2.png", "/images/fab-3.png", "/images/fab-full.png"]
-    alt: ["Fabulous Fit Project Image 1", "Fabulous Fit Project Image 2", "Fabulous Fit Project Image 3", "Fabulous Fit Project Image 4"]
+    url: ["https://the-boy-246.sirv.com/Project%20assets/fab-1.png", "https://the-boy-246.sirv.com/Project%20assets/fab-2.png", "https://the-boy-246.sirv.com/Project%20assets/fab-3.png", "https://the-boy-246.sirv.com/Project%20assets/fab-full.png"]
+    alt: ["Fabulous Fit hero section", "Fabulous Fit benefits section", "Fabulous Fit contact section", "Fabulous Fit full homepage"]
 draft: false
 ---
