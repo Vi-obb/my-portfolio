@@ -8,7 +8,7 @@ details:
     client: 'Selorm Promise'
     team: ['Me']
 images:
-    url: ["/images/ckodon-1.png", "/images/ckodon-2.png", "/images/ckodon-3.png", "/images/ckodon-4.png"]
-    alt: ["Ckodon Project Image 1", "Ckodon Project Image 2", "Ckodon Project Image 3", "Ckodon Project Image 4"]
+    url: ["https://the-boy-246.sirv.com/Project%20assets/ckodon-1.png", "https://the-boy-246.sirv.com/Project%20assets/ckodon-2.png", "https://the-boy-246.sirv.com/Project%20assets/ckodon-3.png", "https://the-boy-246.sirv.com/Project%20assets/ckodon-4.png"]
+    alt: ["Dashboard empty state", "Home empty state", "Upload documents page", "Dashboard overview"]
 draft: false
 ---
