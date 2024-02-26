@@ -7,7 +7,7 @@ const { frontmatter } = Astro.props;
   <section id="details" class="py-10 md:py-20 flex flex-col gap-6 md:gap-8 font-Neue">
     <div class="flex flex-row items-center">
       <div class="md:w-1/2">
-        <h1 class="font-Pangaia text-3xl md:text-4xl mb-2">{frontmatter.title}</h1>
+        <h1 class={`font-Pangaia text-3xl md:text-4xl mb-2 ${frontmatter.color}`}>{frontmatter.title}</h1>
         <p class="text-base md:text-xl text-pretty">
           {frontmatter.description}
         </p>
@@ -17,15 +17,15 @@ const { frontmatter } = Astro.props;
     <div class="grid grid-cols-2 gap-6 md:grid-cols-4 md:gap-8">
       <div>
         <p class="text-white/50 text-xs md:text-sm">Project Type</p>
-        <p class="text-sm md:text-base">{frontmatter.tags[0]}</p>
+        <p class="text-sm md:text-base">{frontmatter.tags.join(', ')}</p>
       </div>
       <div>
-        <p class="text-white/50 text-xs md:text-sm">Time</p>
-        <p class="text-sm md:text-base">{frontmatter.details.time}</p>
+        <p class="text-white/50 text-xs md:text-sm">Client</p>
+        <p class="text-sm md:text-base">{frontmatter.details.client}</p>
       </div>
       <div>
-        <p class="text-white/50 text-xs md:text-sm">Cost</p>
-        <p class="text-sm md:text-base">{frontmatter.details.cost}</p>
+        <p class="text-white/50 text-xs md:text-sm">Software</p>
+        <p class="text-sm md:text-base">{frontmatter.details.tools.join(', ')}</p>
       </div>
       <div>
         <p class="text-white/50 text-xs md:text-sm">Who worked on this</p>

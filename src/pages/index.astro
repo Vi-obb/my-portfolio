@@ -9,25 +9,27 @@ const allProjects = await getCollection('projects', ({ data }) => {
   return import.meta.env.PROD ? data.draft !== true : true;
 });
 
-const title = 'Vincent Obbeng | Web Developer & Designer';
+const title = 'Home';
 ---
 
 <BaseLayout title={title}>
   <main class="font-Neue text-lg md:text-xl">
-    <section class="h-screen pb-10 md:pb-20 flex flex-row items-center">
-      <div class="md:w-1/2 h-max">
-        <p class="text-balance mb-8 font-medium leading-relaxed">
-          I'm Vincent, a web developer and designer based in Accra, Ghana. I
-          love to make <span
+    <section
+      class="h-screen flex flex-col-reverse md:flex-row items-center gap-10"
+    >
+      <div class="w-full md:w-1/2">
+        <p class="text-wrap mb-8 font-medium">
+          I'm Vincent, a software engineer and designer based in Accra, Ghana. I
+          make <span
             class="font-Pangaia font-medium text-light-blurple mx-1 hover:underline hover:decoration-white hover:decoration-2"
-            ><a href="/">landing pages</a></span
+            ><a href="/">software interfaces</a></span
           >, <span
             class="font-Pangaia font-medium text-light-blurple mx-1 hover:underline hover:decoration-white hover:decoration-2"
             ><a href="/">marketing sites</a></span
           > and <span
             class="font-Pangaia font-medium text-light-blurple mx-1 hover:underline hover:decoration-white hover:decoration-2"
-            ><a href="/">application interfaces</a></span
-          >. Still finding more stuff to be good at but if you need help with
+            ><a href="/">content-driven websites</a></span
+          >. I'm still finding more things to be insanely good at but if you need help with
           any of the above, I'm your guy!
         </p>
         <a href="mailto:obbengvincent@gmail.com"
@@ -36,9 +38,11 @@ const title = 'Vincent Obbeng | Web Developer & Designer';
           </Button></a
         >
       </div>
-      <div class="hidden md:w-1/2"></div>
+      <div class="w-full md:w-1/2">
+        <img src="/images/computer-pixel-art.jpg" alt="80's Computer" class="rounded-md" />
+      </div>
     </section>
-    <section class="py-10 md:py-20">
+    <section class="py-20 mt-10 md:mt-0">
       <h2 class="mb-8 md:mb-16 font-medium">Recent projects</h2>
 
       {

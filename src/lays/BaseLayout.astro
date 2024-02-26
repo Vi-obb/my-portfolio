@@ -21,9 +21,9 @@ const { title } = Astro.props;
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
-    <title>{title}</title>
+    <title>{title} <> Vincent Obbeng</title>
   </head>
-  <body class="container bg-black text-white px-6 md:px-40">
+  <body class="container bg-noise bg-fixed text-white px-6 md:px-40">
     <Header />
     <slot />
     <Footer />

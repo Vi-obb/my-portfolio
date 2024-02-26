@@ -1,5 +1,9 @@
 ---
-import { Separator } from '@/components/ui/separator';
+import {
+  GitHubLogoIcon,
+  TwitterLogoIcon,
+  DiscordLogoIcon,
+} from '@radix-ui/react-icons';
 ---
 
 <header class="py-6">
@@ -9,40 +13,63 @@ import { Separator } from '@/components/ui/separator';
     >
       <ul class="flex flex-row gap-4">
         <li class="hover:underline hover:decoration-blurple hover:decoration-2">
-          <a href="https://github.com/Vi-obb">Github</a>
-        </li>
-        <li class="hover:underline hover:decoration-blurple hover:decoration-2">
-          <a href="https://www.discordapp.com/users/719253504547487794"
-            >Discord</a
+          <a href="https://github.com/Vi-obb"
+            ><GitHubLogoIcon className="hover:text-blurple" /></a
           >
         </li>
         <li class="hover:underline hover:decoration-blurple hover:decoration-2">
-          <a href="https://www.twitter.com/FiifiObbeng">Twitter/X</a>
+          <a href="https://www.discordapp.com/users/719253504547487794"
+            ><DiscordLogoIcon className="hover:text-blurple" /></a
+          >
+        </li>
+        <li class="hover:underline hover:decoration-blurple hover:decoration-2">
+          <a href="https://www.twitter.com/FiifiObbeng"
+            ><TwitterLogoIcon className="hover:text-blurple" /></a
+          >
         </li>
       </ul>
-      <div>
-        <Separator orientation="vertical" />
-      </div>
-
-      <ul class="flex flex-row gap-4 ">
-        <li class="hover:underline hover:decoration-blurple hover:decoration-2">
+      <ul class="flex flex-row gap-4">
+        <li
+          id="home"
+          class="hover:underline hover:decoration-blurple hover:decoration-2"
+        >
           <a href="/">Home</a>
         </li>
-        <li class="hover:underline hover:decoration-blurple hover:decoration-2">
+        <li
+          id="about"
+          class="hover:underline hover:decoration-blurple hover:decoration-2"
+        >
           <a href="/about">About</a>
         </li>
-        <li class="hover:underline hover:decoration-blurple hover:decoration-2">
-          <a href="/blog">Writing</a>
+        <li
+          id="blog"
+          class="hover:underline hover:decoration-blurple hover:decoration-2"
+        >
+          <a href="/blog">Articles</a>
         </li>
       </ul>
     </div>
 
-    <div
-      class="w-full font-Neue hidden md:w-1/2 md:flex justify-end items-start md:items-center"
-    >
-      <a href="/">
-        <h2 class="text-dark-green font-Pangaia text-xl align-self-start">V. O</h2>
+    <div class="font-Neue w-full md:w-1/2 flex justify-end items-center">
+      <a href="/" class="flex flex-row items-center gap-2">
+        <img src="/images/logo.svg" class="h-6 w-6 rounded-sm" />
+        <div>
+          <h2 class="font-Pangaia text-lg h-fit">fiifi</h2>
+        </div>
       </a>
     </div>
   </nav>
 </header>
+
+<script>
+  window.onload = function () {
+    var path = window.location.pathname;
+    // Remove leading and trailing slashes
+    var trimmedPath = path.replace(/^\/|\/$/g, '');
+    var page = trimmedPath || 'home'; // Default to 'home' if path is empty
+    var element = document.getElementById(page);
+    if (element) {
+      element.classList.add('underline', 'decoration-blurple', 'decoration-2');
+    }
+  };
+</script>

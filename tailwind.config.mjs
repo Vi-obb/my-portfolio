@@ -21,6 +21,9 @@ module.exports = {
       },
     },
     extend: {
+      backgroundImage: {
+        'noise': "url('/images/img-noise.png')",
+      },
       colors: {
         blurple: '#5865f2',
         'dark-blurple': '#4954ca',
