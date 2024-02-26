@@ -1,25 +1,27 @@
 ---
 import BaseLayout from '../lays/BaseLayout.astro';
-
 const title = 'About Me';
 ---
 
 <BaseLayout title={title}>
   <section class="py-10 md:py-20 font-Neue">
-    <div class="flex flex-row items-center">
-      <div class="md:w-1/2">
-        <h1 class="text-3xl font-Pangaia font-medium md:text-4xl text-balance mb-2">
-          Hello! I'm Vincent Obbeng
+    <div class="flex items-center">
+      <div class="w-full md:w-3/5">
+        <h1
+          class="text-3xl font-Pangaia font-medium md:text-4xl text-balance mb-2"
+        >
+         Vincent fiifi <span>"The Boy"</span> Obbeng
         </h1>
-        <p class="text-base md:text-xl text-pretty">
-          But you already knew that. This is where I tell you about myself. I'm a mathematician,
-          software engineer, and designer. I'm passionate about building products that are simple,
-            intuitive, and delightful to use. I'm also passionate about learning and teaching. I
-            am currently a teaching assistant at the Kwame Nkrumah University of Science and Technology, 
-            teaching the basics of programming and numerical analysis.
+        <p
+          class="text-base md:text-xl text-wrap"
+        >
+          A mathematician, software engineer, and designer. I'm passionate about
+          building products that are simple, intuitive, and delightful to use.
+          I love to learn new things and also share what I learn. I am currently a
+          teaching assistant at the Kwame Nkrumah University of Science and
+          Technology, teaching the basics of programming, numerical analysis and calculus.
         </p>
       </div>
-      <div class="hidden md:block"></div>
     </div>
   </section>
 </BaseLayout>

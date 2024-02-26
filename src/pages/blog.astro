@@ -7,7 +7,7 @@ const allBlogs = await getCollection('blog', ({ data }) => {
   return import.meta.env.PROD ? data.draft !== true : true;
 });
 
-const title = 'Writing';
+const title = 'Articles';
 ---
 
 <BaseLayout title={title}>
@@ -17,7 +17,7 @@ const title = 'Writing';
         <h1
           class="text-3xl font-Pangaia font-medium md:text-4xl text-balance mb-2"
         >
-          This is my blog, where stories unfold
+          This is my digital journal 
         </h1>
         <p class="text-base md:text-xl text-pretty">
           I write about my interests: design, math, food, programming and
