@@ -1,12 +1,11 @@
 ---
 title: 'Ckodon Foundation, The'
-color: 'blue'
+color: 'text-blue-500'
 tags: ["Web design"]
 description: 'School application web platform for Ckodon Foundation, a non-profit helping students get into colleges.'
 details:
-    cost: '$1000'
-    time: '3 months'
-    from: 'Selorm Promise'
+    tools: [Figma]
+    client: 'Selorm Promise'
     team: ['Me']
 images:
     url: ["/images/ckodon_cut_1.svg", "/images/ckodon_cut_2.svg", "/images/ckodon_cut_3.svg"]
