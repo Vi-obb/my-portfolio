@@ -8,9 +8,10 @@ const allBlogs = await getCollection('blog', ({ data }) => {
 });
 
 const title = 'Articles';
+const description = 'This is my digital journal where I write about my interests and experiences.';
 ---
 
-<BaseLayout title={title}>
+<BaseLayout title={title} description={description}>
   <section class="py-10 md:py-20 font-Neue">
     <div class="flex flex-row items-center">
       <div class="md:w-1/2">

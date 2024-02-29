@@ -10,16 +10,17 @@ const allProjects = await getCollection('projects', ({ data }) => {
 });
 
 const title = 'Home';
+const description = 'Front-end Engineer & Product Designer. This is my very own piece of the internet';
 ---
 
-<BaseLayout title={title}>
+<BaseLayout title={title} description={description}>
   <main class="font-Neue text-lg md:text-xl">
     <section
       class="py-10 md:py-20 flex flex-col-reverse md:flex-row items-center gap-10"
     >
       <div class="w-full md:w-1/2">
         <p class="text-wrap mb-8 font-medium">
-          I'm Vincent, a software engineer and designer based in Accra, Ghana. I
+          I'm Vincent, a Front-end Engineer and Product Designer based in Accra, Ghana. I
           make <span
             class="font-Pangaia font-medium text-light-blurple mx-1 hover:underline hover:decoration-white hover:decoration-2"
             ><a href="/">software interfaces</a></span
@@ -43,7 +44,7 @@ const title = 'Home';
       </div>
     </section>
     <section class="py-20 mt-10 md:mt-0">
-      <h2 class="mb-8 md:mb-16 font-medium">Recent projects</h2>
+      <h2 class="mb-8 md:mb-16 font-medium">Featured projects</h2>
 
       {
         allProjects.map((work) => (
