@@ -1,9 +1,10 @@
 ---
 import BaseLayout from './BaseLayout.astro';
-const { frontmatter } = Astro.props;
+const { frontmatter, slug } = Astro.props;
+const imgLink = `${Astro.site?.origin}/og/${slug}.png`;
 ---
 
-<BaseLayout title={frontmatter.title}>
+<BaseLayout title={frontmatter.title!} description={frontmatter.description!} image={`/og/${slug}.png`}>
   <section id="details" class="py-10 md:py-20 flex flex-col gap-2 font-Neue">
     <div class="flex flex-row items-center">
       <div class="md:w-1/2">
